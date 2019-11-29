@@ -58,3 +58,5 @@ variable වලට values assign කරනකොට data type තියෙනව
 
 1. primitive data type
 2. object data type
+
+primitive data type කියන්නේ directly ඒ data එකට අදාල value එක memory එක යම්කිසි කොටසක් අත්කර ගන්නවා 
