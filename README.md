@@ -196,6 +196,53 @@ array එකට values කතුකරන්න අයින් කරන්න 
 
     4.fruits.pop();
 
-5.console.log(fruits);
+    5.console.log(fruits);
 
-මේ 2 line එකේ තියෙන්නේ අගට values add කරලා තියෙනවා, සහ මේ 3 line එකේ තියෙන්නේ  මුලට values add කරලා තියෙනවා. තවත් දෙයක් පුළුවන් අපිට මේ 4 line එකේ තියෙන්නේ array එකේ අවසානයට තියෙන element එක අයින් කරන්න.
+මේ 2 line එකේ තියෙන්නේ අගට values add කරලා තියෙනවා, සහ මේ 3 line එකේ තියෙන්නේ  මුලට values add කරලා තියෙනවා. තවත් දෙයක් පුළුවන් අපිට මේ 4 line එකේ තියෙන්නේ array එකේ අවසානයට තියෙන element එක අයින් කරන්න. 
+
+අපිට යනම් කිසි array එකක් නිවැරදි array එක්කද කියල බලාගන්න මේ 1 line එකේ තියෙන keyword එක use කරන්න පුළුවන් මේක cheeking එකක් මේකෙදි අනිවාර්යයෙන්ම boolean output එකක් ඒ කියන්නේ true or false කියල තමයි එන්නේ මේකේ තියෙන විදියට isArray කියල වරහන් ඇතුලේ array name එක දෙන්න පුලුවන්.
+තව අපිට පුළුවන් යම්කිසි array එකක array index එක ලබාගන්න එකටමේ 2 line එකේ තියෙන keyword එක බාවිතා කරන්න පුළුවන් මේකෙදි මුලින්ම array නම පස්සේ වරහන් ඇතුලේ අපිට අවෂ්‍ය element එකේ name එක ගන්න පුළුවන්.
+
+    1.console.log(Array.isArray(fruits));
+    2.console.log(fruits.indexOf('banana'));
+   
+හරි දැන් අපි array ගැන කතා කරලා ඉවරයි දැන් අපි බලමු object එකක් කියන්නේ මොකද්ද කියල, සහ object එකක් හදන්නේ කොහොමද කියල.
+මුලින්ම අපි object එකක් හදා ගමු මුලිම අපි objectඑකක් හදන්න const කියන variable type එකෙන් තමි හදන්න ඕනේ මේ 1 line එකේ තියෙන විදියට අපි object එකට name එකක් දෙන්න ඕනේ පස්සේ object එක හදන්න ඕනේ මේ 2-11 line එකේ තියෙනවා වගේ සාගල වරහන් ඇතුලේ.
+පස්සේ මේ 3 line  එකේ තියෙනවා වෙගේ object එකේ තියෙනේ element වලට colon එකකින් තමයි වෙන්කරලා එයට අදාල variable ටික දෙන්නේ මේ 4 line එකේ තියෙනවා වගේ මේ දෙන හැම variable එකක් ම අපිට දෙන්න වෙන්නේ single quotation එකක් ඇතුලේ තමයි.
+තවදෙයක් තමයි අපිට මේ object ඇතුලෙත් array හදාගන්න පුළුවන් මේ 6 line එකේ වගේ.
+තව අපිට පුළුවන් අපිට මේ object ඇතුලේ තව object හදන්න පුළුවන් මේ 7-10 line එකේ වගේ ඒවාට අපි විශේෂ නමක් කියනවා embedded object කියල.
+
+    1. const person = 
+    2. {
+    3.  firstName : 'Gehan',
+    4.  LastName : 'Yasanka',
+    5.  Age : '16',
+    6.  Hobbies : ['Music,Dance'],
+    7.  Addres :
+    8.			{ street : 'Sampath Uyana',
+    9.  		  city : 'Matara',
+    10. 		}
+    11. }
+
+හරි දැන් අපි බලමු මේ හදාගත්ත object එක console.log එකක් හරහා පෙන්නන්න පුළුවන් ක්‍රම.
+
+දැන් අපි බලමු මේ අපි හදාගත්තු object එකේ ඇතුලේ තියෙන ඔක්කොම data බලන්නේ කොහොමද කියල එකට අපි මේ 1 line එකේ තියෙන මේ command එක use කරනවා.
+
+    1.  console.log(person);
+
+අපිට අවශ්‍ය නම් පුළුවන් මේ තැනට alert එකක් දීල බලන්න 2 line එත් එය මේ අවස්ථවට සාර්ථක ක්‍රමයක් නොවේ.
+
+    2.  altre(person);
+    
+අපිට පුළුවන් මේ object එක ඇතුලේ තියෙන element වලින් තමන්ට අවශ්‍ය element විතරක් බාවිතා කරන්න මේ 3 line එකේ වගේ.
+
+    3. console.log(person.firstName,person.LastName);
+    
+ඒවගේම අපිට පුළුවන් මේ object එක ඇතුලේ තියෙන array එකත් access කරන්න මේ 4 line එකේ වගේ.
+    
+    4. console.log(person.Hobbies[1]);
+
+තවදෙයක් තමයි object එක ඇතුලේ තියෙන තවත් object එකක් (embedded object) access කරනවිදියත් අපිට මේ line එකෙන් බලන්න පුළුවන්
+
+    5. console.log(person.Addres.city);
+
