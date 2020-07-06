@@ -242,7 +242,80 @@ array එකට values කතුකරන්න අයින් කරන්න 
     
     4. console.log(person.Hobbies[1]);
 
-තවදෙයක් තමයි object එක ඇතුලේ තියෙන තවත් object එකක් (embedded object) access කරනවිදියත් අපිට මේ line එකෙන් බලන්න පුළුවන්
+තවදෙයක් තමයි object එක ඇතුලේ තියෙන තවත් object එකක් (embedded object) access කරනවිදියත් අපිට මේ 5 line එකෙන් බලන්න පුළුවන්
 
     5. console.log(person.Addres.city);
+    
+තව අපිට මෙතැනදී පාවිච්චි කරන්න පුළුවන් වෙනවා D structure කියන දේ
+මේක ගැන පොඩි හැදින් වීමක් කරොත් මේ object එක ඇතුලේ තියෙන මේ array එක ඇතුලේ තියෙන element එලියට ගන්න ඒවා අපිට එලියට ගත්තම අපිට පුළුවන් directly පාවිච්චි කරන්න.
 
+    6.	const{firstName,LastName} = person;
+    
+මේ 6 line එකේ තියෙනවා වගේ මේකෙදි අපිට කලින් වගේ ඕන වෙන්නේ නෑ object එක ඇතුලට ගිහින් variable access කරන්න අපි මේ 7 line එකේ හදුන්වල තියෙන නිසා අපිට directly access කරන්න පුළුවන්
+
+    7.	console.log(firstName);
+    
+එත් එක්කම අපිට අවශ්‍යයි නම් පුළුවන් කලින් 8 line එකටම අපිට මේ වගේ embedded object එකක් උනත් එකතු කරන්න පුළුවන්
+
+    8.	const{firstName,LastName,Addres.{city}} = person; (6 line එකම අලුතින් edit කර ඇත)
+
+ඊට පස්සේ අපිට මේකේ කෙලින්ම අපිට city කියන variable එක access කරන්න පුළුවන් line
+
+    9.	console.log(city);
+    
+තව අපිට පුළුවන් මේ object එකට අලුතින් element එකතු කරන්න මේ 10 line එකේ වගේ    
+    
+   10.  person.email = 'gehan@gmail.com';
+    
+දැන් අපිට මේකේ output එක අරන් බැලුවොත් අලුතින් email කියන attributes එක එකතුවෙලා තියෙනවා 11 line    
+    
+   11.	console.log(person);    
+    
+අපි දැන් බලමු array object එකක element access කරන්නේ කියල මේ array object ඒකේ ඇත්තටම තියෙන්නේ array එකක් තමයි තියෙන්නේ ඒ array එක ඇතුලේ object කීපයක් දකින්න පුළුවන් එතකොට array එකේ element විදියට තියෙන්නේ object
+මේ 1-17 line එකේ තියෙන්න විදියට todos කියන array element එක ඇතුලේ තමයි objects 3 හදල තියෙන්නේ 
+
+    1.	const todos = [
+	
+    2.	{
+    3.		id:1,
+    4.		text:'take out trash',
+    5.		isCompleted:false
+    6.	},
+    7.	{
+    8.		id:2,
+    9.		text:'meeting with boss',
+    10.		isCompleted:false
+    11.	},
+    12.	{
+    13.		id:3,
+    14.		text:'raining hear',
+    15.		isCompleted:false
+    16.	}
+    17. ]
+
+දැන් අපිට මේ ඔක්කොගෙම normal output එක බලන්න පුළුවන් මේ 18 line එකෙන් 
+
+    18.	console.log(todos);
+
+හරි දැන් අපි බලමු ඒ array ඇතුලේ තියෙන object access කරන්නේ කොහොමද කියල ඇත්තටම මෙතන මුලින්ම තියෙන්නේ todos කියන array එකක් 
+
+අපිට පළවිනි array element එක එහෙම නැත්තන් පලවෙනි object එකේ text එකට අදාල output එක ගන්න නම් මන් මේ code එක ගහන්න ඕනේ line අපි මේකෙදි 0 වෙනේ array එක access කරලා එකේ ඇතුලේ තියෙන text වල output එක ගන්න එක තමයි මේ කරලා තියෙන්නේ
+
+    19. console.log(todos[0].text);
+
+JSON කියන්නේ මොකද්ද කියල දැන් අපි බලමු JSON කියන්නෙත් data format එකක් මේ JSON කියන data format එක stack development වලදී ඒ වගේම server එකකට data send කරනවා නම් data send කරන format එක JSON format එක තමයි
+ඇත්තටම මේ JSON කියන file format එක object එකකට හමාතින්ම අක්රුතියෙනුත් සමානයි object වල key word වල single quotation දානවා වගේ JSON වල key word වල අපි දන්නේ double quotation ඒවගේ පොඩි පොඩි වෙනස්කම් ටිකක් තියෙනවා JSON වල අපි කිසිම අවස්ථාවක single quotation බාවිතා කරන්නේ නැ.
+
+දැන් අපි බලමු අපි මේ array object එක JSON වලට convert කරගන්න.
+
+අපිට කරන්න තියෙන්නේ මේ keyWord එක බාවිතා කරන්න අපි මුලින්ම මේකේ variable එකක් create කරන්න වෙනවා මේ 1 line එකේ වගේ todojson කියන නමින් අපි මේ convert කරගත්තේ කලින් අපි හැදුව todos කියන array object එක (1-17 lines) වල තියෙන.
+
+    1.	const todojson = JSON.stringify(todos);
+
+මේ 1 line එකේ JSON.stringify කියන keyword එකෙන් අපේ array එක string format එකක් බවට පත් වෙනවා මේ වරහන් ඇතුලේ දීල තියෙන්නේ අපි කලින් හද ගත්ත array එක. ඒක සමනකරලා තියෙන්නේ අපිට හැදෙන්න ඕනේ JSON file එකේ name එකට todojson කියන
+
+අපි දැන් බලමු මේක කොහොමද අපිට බලන්න පුළුවන් කියල මේ 2 line එකෙන්
+
+    2.	console.log(todojson);
+
+අපිට දැන් මේක JSON format එකෙන් convert වෙලා තියෙනවා බලාගන්න පුළුවන්.
