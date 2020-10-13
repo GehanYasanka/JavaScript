@@ -454,10 +454,9 @@ arrow function වල ප්‍රදාන වෙනස තමයි අපි 
 
 ඒ වෙනුවට data type එකක් initialize කරන්න පුළුවන් පල්ලෙහා code එකේ වගේ 1line එකේ අන්තිමට arrow  එකක් දාල එතකොටත් සාමාන්යේ විදියමයි කලින් වගේම output එක බලාගන්න පුළුවන්
 
-	1. const addnums = (num1,num2)=>{
-	2. return num1+num2; }
-	3. ;
-	4.console.log (addNums(67+23));
+	1. const addnums = (num1,num2) =>{
+	2. console.log(num1+num2); }
+	3. addnums();
 
 ඉතින් අපි මෙතැනදී බාවිතා කරන්නේ එක expression එකක් විතරක් නිසා ඒ කියන්නේ අපි මෙතැ නදී බාවිතා කරන්නේ console.log එක විතරක් හින්ද අපිට සාගල වරහන් අත්‍යවශ්‍ය නෑ අපිට මේ උද code එකේ 1line එකේ තියෙන වරහනත් අයින් කරගන්න පුළුවන් හැබැයි මේකේ අපි බාවිතා කරන්නේ එක parameter විතරක් නම් මේ පල්හේහ code එකේ 1line එකේ වගේ අපිට මේ 2line එකේ වගේ constant එකක් අපේ parameter  එකට එකතු කරන්නත් පුවන් 
 
